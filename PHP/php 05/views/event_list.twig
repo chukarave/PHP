@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <body>
+        <ul>
+            {% for event in events %}
+            <li>
+                <a href="/{{event.id}}">
+                <h2>{{event.title}}</h2>
+                <p>{{event.date | date(date_format)}} - {{event.date | date(time_format)}}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

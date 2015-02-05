@@ -1,0 +1,14 @@
+{
+    "name": "noa/php 05",
+    "require": {
+        "silex/silex": "~1.2",
+        "symfony/yaml": "~2.6",
+        "twig/twig": "~1.18"
+    },
+    "authors": [
+        {
+            "name": "Noa Rave",
+            "email": "noa.rave@berlinonline.de"
+        }
+    ]
+}

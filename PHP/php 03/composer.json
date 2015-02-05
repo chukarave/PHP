@@ -1,0 +1,12 @@
+{
+    "name": "noa/php 03",
+    "require": {
+        "silex/silex": "~1.2"
+    },
+    "authors": [
+        {
+            "name": "Noa Rave",
+            "email": "noa.rave@berlinonline.de"
+        }
+    ]
+}
