@@ -1,6 +1,6 @@
 <?php
 
-function print_array(array $values)
+function print_array(array $values) // specifiy array as type of expected argument.
 {
     foreach($values as $value) {
         echo $value . PHP_EOL;
@@ -21,7 +21,7 @@ class Foo
     }
 }
 
-function print_foo(Foo $f)
+function print_foo(Foo $f) // $f has to be an instance of class Foo
 {
     echo $f->getName();
 }
@@ -36,6 +36,6 @@ print_array($a);
 
 print_foo($b);
 
-print_array("this is a string");
+print_array("this is a string"); // will result in a fatal error
 
 ?>
