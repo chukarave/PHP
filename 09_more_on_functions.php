@@ -38,4 +38,32 @@ print_foo($b);
 
 print_array("this is a string"); // will result in a fatal error
 
+#############################################
+#        Default values for arguments       #
+#############################################
+
+
+function print_array1(array $values, $reverse = false)
+{
+    // if reverse is set to true, reverse order of array elements.
+    if ($reverse) {
+        $print_values = array_reverse($values);
+    } else {
+        $print_values = $values;
+    }
+
+    foreach ($print_values as $value) {
+        echo $value . PHP_EOL;
+    }
+}
+
+
+print_array([1, 2, 3, 4], true);
+/* prints:
+4
+3
+2
+1
+*/
+
 ?>
