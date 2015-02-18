@@ -1,0 +1,16 @@
+{% extends "layout.twig"%} 
+{# Twig templates can inherite from 
+  other Twig templates using the 
+  "extend keyword"
+  This way we do not have to type in 
+  the html structure for each template
+  but inherite it from layout.twig.
+#}
+
+{% block content %} {# beginning of content #}
+<h2>{{image.title}}</h2>
+<img src="{{image.url}}" />
+
+{% endblock %} {# end of inserted content #}
+
+
