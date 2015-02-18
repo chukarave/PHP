@@ -12,7 +12,7 @@ class ImageService
     {
         // finder is a symfony class for finding files and directories.
         $finder = new Finder();
-        // files() restricts the matching to directories only.
+        // files() restricts the matching to files only.
         // name() allows adding rules to which files must match.
         // in() defines the directory in which to search.
         $finder->files()->name('*.yml')->in('data');
@@ -29,7 +29,7 @@ class ImageService
     }
 
     // argument can only be an instance of SplFileInfo
-    //  (or an inherited class?)
+    // and inherited classes
     protected function createImageFromFile(SplFileInfo $yml_file)
     {
         // getBasename returns the name of the file.
@@ -55,7 +55,8 @@ class ImageService
         $finder = new Finder();
         // get the file name id.yml from the data directory.
         $finder->name($id . '.yml')->in('data');
-
+        
+        // iterator is an object which gets converted into an array
         $files = iterator_to_array($finder);
 
         // $files is supposed to be an array

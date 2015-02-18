@@ -27,7 +27,7 @@ $app->get('/static/{path}', function ($path) use ($app) {
         // if file exists is false,
         // aborts the current request by sending a proper HTTP error.
     }
-    // return the file using the SplFileInfo method sendFile(filepath);
+    // return the file using the Silex\Application method sendFile(filepath);
     return $app->sendFile($path);
 });
 
@@ -36,8 +36,10 @@ $app->get("/", function() use ($app) {
     $image_service = new ImageService(); // from ImageService.php
     $all_images = $image_service->getAll();
 
-    // the render method is provided by the TwigTrait
+    // the render method is provided by the Twig_Environment
     // to render a view with the given parameters.-
+    // var_dump($app['twig']);
+    // var_dump(class_implements($app));
     return $app['twig']->render(
         'image_list.twig', // where to find the view
         [
